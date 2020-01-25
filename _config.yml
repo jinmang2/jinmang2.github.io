@@ -11,16 +11,16 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "행복하게, 자유롭게"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "MyungHoon Jin"
-description              : "Wanna be a Data Scientist."
+description              : "Junior-software engineer, Tech-saler, Researcher, Author, ..."
 url                      : "https://jinmang2.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -107,10 +107,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  name             : "MyungHoon Jin"
+  avatar           : "/assets/images/profile_image.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Wanna be a **Data Scientist**."
+  location         : "Gyeonggi-do, South Korea"
   email            :
   links:
     - label: "Email"
