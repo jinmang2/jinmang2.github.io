@@ -103,7 +103,8 @@ class LinkedList(object):
         
     def get(self, idx):
         if idx > self.n:
-            raise ValueError("'idx' is larger than the total number of nodes")
+            raise ValueError(
+                "'idx' is larger than the total number of nodes")
         elif idx == 0:
             return self.head
         elif idx == self.n:
