@@ -22,7 +22,7 @@ categories: DataStructure
 
 러닛은 위와 같은 이념을 가지고 운영하는 플립러닝 스터디 플랫폼으로, `programming`, `data science`, `marketing`, `business` 카테고리들에 대한 class를 운영하고 있습니다.
 
-Online/Offline 강의를 플립러닝 방식으로 진행하고 있고 수준급의 다양한 강의를 접할 수 있는 스터디 플랫폼이라고 하네요.
+Online강의를 플립러닝 방식으로 진행하고 있고 수준급의 다양한 강의를 접할 수 있는 스터디 플랫폼이라고 하네요.
 
 ## 음... 알겠어. 러닛에 대해 소개좀 해줘.
 
