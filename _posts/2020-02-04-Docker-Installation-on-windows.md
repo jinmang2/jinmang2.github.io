@@ -10,7 +10,6 @@ categories: Docker
 
 >## Windows 10 Home Edition
 >- 위와 같이 설치할 경우 아래의 에러가 발생
->
 >  #### Installation failed: one prerequisite is not fulfilled
 >
    >```
