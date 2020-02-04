@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 Home Edition에서 Docker 설치하기"
 date: 2020-02-04 21:25:00 -0400
-categories: DataStructure
+categories: Docker
 ---
 
 # Windows 10 Home Edition에서 `Docker` 설치하기
