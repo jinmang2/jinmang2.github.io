@@ -3,9 +3,6 @@ title: "Windows 10 Home Edition에서 Docker 설치하기"
 date: 2020-02-04 21:25:00 -0400
 categories: Docker
 ---
-
-# Windows 10 Home Edition에서 `Docker` 설치하기
-
 >## Windows 10 pro & enterprise
 - [https://hub.docker.com/?overlay=onboarding](https://hub.docker.com/?overlay=onboarding)에서 `Docker for Windows`를 다운받고
 - 이를 설치하면 사용 가능
