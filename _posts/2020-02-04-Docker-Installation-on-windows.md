@@ -4,27 +4,28 @@ date: 2020-02-04 21:25:00 -0400
 categories: Docker
 ---
 >## Windows 10 pro & enterprise
-- [https://hub.docker.com/?overlay=onboarding](https://hub.docker.com/?overlay=onboarding)에서 `Docker for Windows`를 다운받고
-- 이를 설치하면 사용 가능
-- [Docker를 활용한 khaiii 설치수난기](https://medium.com/@saerombang11/docker%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-khaiii-%EC%84%A4%EC%B9%98%EC%88%98%EB%82%9C%EA%B8%B0-53d014f9eb58)
+>- [https://hub.docker.com/?overlay=onboarding](https://hub.docker.com/?overlay=onboarding)에서 `Docker for Windows`를 다운받고
+>- 이를 설치하면 사용 가능
+>- [Docker를 활용한 khaiii 설치수난기](https://medium.com/@saerombang11/docker%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-khaiii-%EC%84%A4%EC%B9%98%EC%88%98%EB%82%9C%EA%B8%B0-53d014f9eb58)
 
 >## Windows 10 Home Edition
-- 위와 같이 설치할 경우 아래의 에러가 발생
-   #### Installation failed: one prerequisite is not fulfilled
-
-   ```
-   Docker Desktop requires Windows 10 Pro or Enterprise version 15063 to run.
-   ```
-- `Docker Toolbox`를 통하여 설치해야 함.
-- [공식문서](https://docs.docker.com/toolbox/toolbox_install_windows/)에서는 업그레이드하는 것을 추천
-   #### Install Docker Toolbox on Windows
-   
+>- 위와 같이 설치할 경우 아래의 에러가 발생
+>
+>  #### Installation failed: one prerequisite is not fulfilled
+>
+   >```
+   >Docker Desktop requires Windows 10 Pro or Enterprise version 15063 to run.
+   >```
+>- `Docker Toolbox`를 통하여 설치해야 함.
+>- [공식문서](https://docs.docker.com/toolbox/toolbox_install_windows/)에서는 업그레이드하는 것을 추천
+>   #### Install Docker Toolbox on Windows
+>   
    >```
    >Legacy desktop solution. Docker Toolbox is for older Mac and Windows systems 
    >that do not meet the requirements of Docker Desktop for Mac and Docker Desktop for Windows.
    >We recommend updating to the newer applications, if possible.
    >```
-- [Docker Toolbox Install](https://docs.docker.com/toolbox/toolbox_install_windows/)의 순서대로 설치를 진행
+>- [Docker Toolbox Install](https://docs.docker.com/toolbox/toolbox_install_windows/)의 순서대로 설치를 진행
 
 ## STEP 1. BIOS 환경에서 가상화 기능 활성화하기
 - `Docker`는 **컨테이너 기반의 오픈소스 가상화 플랫폼**. 당연히 가상화가 가능해야 사용할 수 있다.
