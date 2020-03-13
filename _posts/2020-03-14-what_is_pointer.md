@@ -43,11 +43,13 @@ int main(void){
     return 0;
 }
 ```
+
 ```
    int형 변수의 주소 = 10진수: 8256220, 16진수: 007DFADC
 double형 변수의 주소 = 10진수: 8256204, 16진수: 007DFACC
   char형 변수의 주소 = 10진수: 8256195, 16진수: 007DFAC3
 ```
+
 - 주소 연산자로 아래와 같이 변수에 할당된 메모리의 시작 주소를 확인하고 변수의 크기를 더하여 메모리 어디에 할당되었는지 알 수 있음
 - 주소는 16진수로 표기함. 어지간해서는 `%p`로 확인하자
 
@@ -81,10 +83,12 @@ int main(void){
     return 0;
 }
 ```
+
 ```
   포인터로 a 값 출력 : 10
 변수명으로 a 값 출력 : 10
 ```
+
 - 포인터 pa는 변수 a가 메모리 어디에 할당되었는지 그 위치를 기억
 - 포인터가 어떤 변수를 가리키면 포인터로 가리키는 변수를 사용할 수 있음
 - 즉, 포인터로 변수를 사용할 수 있음!
@@ -97,6 +101,7 @@ int main(void){
     *pa = 10    // *pa로 a를 활용,
                 // a의 left-value(저장 공간)에 10을 right-value(변수의 값)으로 저장
     ```
+    
 - Note that: `*pa == a; pa == &a`
 
 ### 여러 가지 포인터 사용해보기
@@ -125,6 +130,7 @@ int main(void){
     return 0;
 }
 ```
+
 ```
 두 정수의 값   : 10, 15
 두 정수의 합   : 25
@@ -163,6 +169,7 @@ int *p;
 p = &a;
 p = &b;
 ```
+
 ![pointer3](https://user-images.githubusercontent.com/37775784/76639625-cc45a100-6591-11ea-935c-3fe2fbdb6950.png)
 
 ```c
@@ -170,6 +177,7 @@ int a;
 int *pa, *pb;
 pa = pb = &a;
 ```
+
 ![pointer4](https://user-images.githubusercontent.com/37775784/76639773-19c20e00-6592-11ea-9c40-e5312e4510fa.png)
 
 
@@ -208,6 +216,7 @@ int main(void){
     return 0;
 }
 ```
+
 ```
    char 형 변수의 주소 크기 : 4
     int 형 변수의 주소 크기 : 4
@@ -219,6 +228,7 @@ int main(void){
     int * 포인터가 가리키는 변수의 크기 : 4
  double * 포인터가 가리키는 변수의 크기 : 8
 ```
+
 ![pointer5](https://user-images.githubusercontent.com/37775784/76640503-65c18280-6593-11ea-9d5e-9c0fc2a72c3b.png)
 
 ### 포인터의 대입 규칙
@@ -242,11 +252,13 @@ int main(void){
     return 0;
 }
 ```
+
 ```
 -92559592117432108000000000000000000000000000000000000000000000.0000
 // 보통은 아래의 경고 메세지 발생
 warning C4133: '=' : 'int *'과(와) 'double *' 사이의 형식이 호환되지 않습니다.
 ```
+
 ![pointer7](https://user-images.githubusercontent.com/37775784/76641792-7ffc6000-6595-11ea-8ce0-40d1568f831d.png)
 
 - 컴파일러는 p에 저장된 값을 int형 변수의 주소로 생각하고, pd에 저장된 값을 double형 변수의 주소로 생각
@@ -261,7 +273,9 @@ double *pd = &a;    // pd가 double형 변수 a를 가리키도록 초기화
 int *pi;            // int형 변수를 가리키는 포인터 선언
 pi = (int *)pd;     // pd값을 형 변환하여 pi에 대입
 ```
+
 ![pointer8](https://user-images.githubusercontent.com/37775784/76641787-7d9a0600-6595-11ea-8853-8b2f5b52f518.png)
+
 - 에러는 안뜨지만 8bytes가 아닌 앞의 4bytes만 사용 가능...
 
 #### 여기서 잠깐! 알고 가라!
