@@ -1,5 +1,5 @@
 ---
-title: "Windows 10 Home Edition에서 Docker 설치하기"
+title: "C언어 Pointer란 무엇인가?"
 date: 2020-03-14 00:19:00 -0400
 categories: C
 ---
