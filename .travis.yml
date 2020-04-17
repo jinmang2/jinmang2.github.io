@@ -1,12 +1,13 @@
 language: ruby
-rvm:
-- 2.4.1
-script: "./bin/cibuild"
-
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-sudo: false
-cache: bundler
-notifications:
-  email: false
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+install: 
+  - gem install jekyll
+  - gem install jekyll-paginate
+script: 
+  - jekyll build
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  
+
