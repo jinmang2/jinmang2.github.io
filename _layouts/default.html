@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
+<head>
+  {% include head.html %}
+  {% if page.use_math %}
+    {% include mathjax_support.html %}
+  {% endif %}
+</head>
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
