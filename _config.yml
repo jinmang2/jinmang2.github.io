@@ -60,15 +60,15 @@ kramdown:
 disqus_url: https://jinmang2.disqus.com
 disqus_username: jinmang2
 
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
-  admin: qiubaiying
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+# # Gitalk
+# gitalk:
+#   enable: true    #是否开启Gitalk评论
+#   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
+#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
+#   repo: qiubaiying.github.io    #仓库名称
+#   owner: qiubaiying    #github用户名
+#   admin: qiubaiying
+#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
 # Analytics settings
@@ -76,11 +76,11 @@ gitalk:
 
 # Analytics
 # https://devinlife.com/howto%20github%20pages/google-search-console-and-analytics/
-analytics:
-  provider               : "google-gtag" # 구글 어날리틱스 등록 false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          : "UA-163863775-1"
-    anonymize_ip         : # true, false (default)
+# analytics:
+#   provider               : "google-gtag" # 구글 어날리틱스 등록 false (default), "google", "google-universal", "custom"
+#   google:
+#     tracking_id          : "UA-163863775-1"
+#     anonymize_ip         : # true, false (default)
 
 # Google Analytics
 ga_track_id: 'UA-163863775-1'            # Format: UA-xxxxxx-xx
