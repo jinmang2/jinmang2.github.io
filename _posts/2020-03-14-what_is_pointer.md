@@ -1,13 +1,19 @@
 ---
+layout: post
 title: "C언어 Pointer란 무엇인가?"
+subtitle: "C programming"
 date: 2020-03-14 00:19:00 -0400
-categories: C
+catalog: true
+use_math: true
+author: jinmang2
+tags:
+    - C programming
 ---
 
 # 혼자 공부하는 C언어, **Pointer**
 - C 언어로 시스템 프로그래밍이 가능한 것은 포인터가 있기 때문
-- 포인터는 어렵지 않음, 단지 헷갈릴 뿐! (그게 어려운거다 멍청아!)
-- 따라서 포인터의 의미를 이해한다면 응용도 어렵지 않음 (그건 맞음)
+- 포인터는 어렵지 않음, 단지 헷갈릴 뿐!
+- 따라서 포인터의 의미를 이해한다면 응용도 어렵지 않음
 - 이번 포스팅에서는 포인터의 개념을 잡아주고 기본적인 사용법을 설명!
 
 ## 1. 포인터의 기본 개념
@@ -18,11 +24,11 @@ categories: C
 - 그것이 바로 포인터!
 
 ### 메모리의 주소
-- 프로그램이 사용하는 메모리의 위치는 **주소 값**으로 식별이 가능
+- 프로그램이 사용하는 메모리의 위치는 **주소 값** 으로 식별이 가능
 - `int a;` 선언 (int이기 때문에 4bytes만큼 메모리 공간이 잡힘)
 
     ![pointer1](https://user-images.githubusercontent.com/37775784/76636230-0ad85d00-658c-11ea-92cc-b78700c1ed28.png)
-    
+
 ### 주소 연산자: `&`
 - 저장된 공간을 이름이 아닌 주소로 사용해보자!
 - `주소`: 변수가 할당된 메모리 공간의 시작 주소
@@ -35,11 +41,11 @@ int main(void){
     int a;
     double b;
     char c;
-    
+
     printf("   int형 변수의 주소 = 10진수: %u, 16진수: %p\n", &a, &a);
     printf("double형 변수의 주소 = 10진수: %u, 16진수: %p\n", &b, &b);
     printf("  char형 변수의 주소 = 10진수: %u, 16진수: %p\n", &c, &c);
-        
+
     return 0;
 }
 ```
@@ -64,22 +70,19 @@ double형 변수의 주소 = 10진수: 8256204, 16진수: 007DFACC
 #include <stdio.h>
 
 int main(void){
-    
+
     int a;      // 일반 변수 선언
     int *pa;    // 포인터 선언
-    
+
     pa = &a;    // 포인터에 a의 주소 대입
                 // a의 주소 값의 `시작` 값이 저장!! 왜 시작이냐?
                 // 변수의 크기만 알면 얼마나 메모리 공간이 할당되었는지
-                // 알 수 있자나~
-                // 너의 맘도 알고싶다 뭔 생각하는지
-                // 말 안해주면 내가 어떻게 알아
     *pa = 10;   // 포인터로 변수 a에 10 대입
                 // 이것이 바로 unary-indirection operation
-    
+
     printf("  포인터로 a 값 출력 : %d\n", *pa);
     printf("변수명으로 a 값 출력 : %d\n", a);
-    
+
     return 0;
 }
 ```
@@ -101,7 +104,7 @@ int main(void){
     *pa = 10    // *pa로 a를 활용,
                 // a의 left-value(저장 공간)에 10을 right-value(변수의 값)으로 저장
     ```
-    
+
 - Note that: `*pa == a; pa == &a`
 
 ### 여러 가지 포인터 사용해보기
@@ -116,17 +119,17 @@ int main(void){
     int *pa, *pb;                   // Declare pointer
     int *pt = &total;               // Declare pointer and Initialize
     double *pg = &avg;              // Declare double type pointer and Initialize
-    
+
     pa = &a;                        // Assign address of a to pa
     pb = &b;                        // Assign address of b to pb
-    
+
     *pt = *pa + *pb;                // Add a and b using unary-indirection operator
     *pg = *pt / 2.0;                // Calc avergage using unary-indirection operator
-    
+
     printf("두 정수의 값   : %d, %d\n", *pa, *pb);
     printf("두 정수의 합   : %d\n", *pt);
     printf("두 정수의 평균 : %.1lf\n", *pg);
-    
+
     return 0;
 }
 ```
@@ -146,12 +149,12 @@ int main(void){
     ...
     int a = 10;
     const pa = &a;
-    
+
     a = 20;     // 먹힌다.
     *pa = 20;   // 에러 발생. 왜? 포인터를 선언할 때 const로 상수화했기 때문에!!
     >>> error C2166: l-value가 const 개체를 지정합니다.
     ```
-    
+
 ## 2. 포인터 완전 정복을 위한 포인터 이해하기
 - 포인터는 주소를 저장하는 일정한 크기의 메모리 공간, 언제든지 다른 주소를 저장하거나 포인터끼리 대입 가능
 - 그러나 일반 변수와는 달리 대입 연산에 엄격한 기준이 적용됨
@@ -194,25 +197,25 @@ int main(void){
     char ch;
     int in;
     double db;
-    
+
     char *pc = &ch;
     int *pi = &in;
     double *pd = &db;
-    
+
     printf("   char 형 변수의 주소 크기 : %d\n", sizeof(&ch));
     printf("    int 형 변수의 주소 크기 : %d\n", sizeof(&in));
     printf(" double 형 변수의 주소 크기 : %d\n", sizeof(&db));
-    
-    
+
+
     printf("   char * 포인터의 주소 크기 : %d\n", sizeof(pc));
     printf("    int * 포인터의 주소 크기 : %d\n", sizeof(pi));
     printf(" double * 포인터의 주소 크기 : %d\n", sizeof(pd));
-    
-    
+
+
     printf("   char * 포인터가 가리키는 변수의 크기 : %d\n", sizeof(*pc));
     printf("    int * 포인터가 가리키는 변수의 크기 : %d\n", sizeof(*pi));
     printf(" double * 포인터가 가리키는 변수의 크기 : %d\n", sizeof(*pd));
-    
+
     return 0;
 }
 ```
@@ -243,12 +246,12 @@ int main(void){
     int a = 10;
     int *p = &a;            // int pointer p 선언 및 a의 주소 값으로 초기화
     double *pd;             // double pointer pd 선언
-    
+
     pd = p;                 // 포인터 p의 값을 포인터 pd에 대입
                             // 포인터의 크기는 같지만, 호환되는 타입이 다름!
     printf("%lf\n", *pd);   // 한번 찍어보세나 젊은이.
                             // 보고싶다.
-    
+
     return 0;
 }
 ```
@@ -282,7 +285,7 @@ pi = (int *)pd;     // pd값을 형 변환하여 pi에 대입
 - 포인터는 항상 정상적으로 할당받은 메모리 공간의 주소를 저장해서 사용해라!
 - 포인터 초기화를 항상 유념하라!
     - 이를 수행하지 않고 간접 참조 연산을 수행하면 알 수 없는 곳으로 찾아가 데이터를 바꾸게 된다!
-    
+
 ### 포인터를 사용하는 이유
 - 메모리에 직접 접근하는 경우
 - 동적 할당한 메모리를 사용하는 경우
