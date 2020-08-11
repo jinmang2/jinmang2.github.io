@@ -1,101 +1,130 @@
-# Site settings
-title: JINMANG2
-SEOTitle: life-blog
-header-img: img/post-bg-desk.jpg
-email: jinmang2@gmail.com
-description: "Every failure is leading towards success."
-keyword: ",,"
-url: "http://jinmang2.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/jinmang2/jinmang2.github.io.git" # you code repository
+# -----------------------------------------------------------------------------
+#  User configuration
+# -----------------------------------------------------------------------------
 
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Little by little, Slowly"
-sidebar-avatar: /img/avatar_me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+title:               Aiden
 
+# The unique resource location of your page.
+# Set to `https://<username>.github.io` when hosting on GitHub Pages
+url:                 https://isme2n.github.io
 
+# Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
+# Set to '/<reponame>' when using the `gh-pages` branch of a repository
+baseurl:             ""
 
-# SNS settings
-RSS: false
-facebook_username:  myunghoonjin
-github_username:    jinmang2
+# A very short description of your page
+tagline:             가장 게으르기위해 가장 부지런한 개발자
 
+# A short description of the page, used in the sidebar and as fallback for the meta description tag.
+# Markdown enabled, but don't use more than one paragraph (enforced by `>`)
+description:         >
+  게으르기 때문에 게발자.
+  글쓰는 걸 좋아하고, 디자인과 개발을 좋아한다.
 
+# This should be the same author as first entry in `_data/authors.yml`
+author:
+  name:              aiden min
+  email:             zoqozqz@gmail.com
 
+# Fallback image and color
+image:               /assets/img/nap.jpg
+color:               '#4f86aa'
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# The font used for headings. Expects a string that is a valid CSS font-family value.
+font_heading:        "'Lato', 'Sans-serif'"
 
+# The text font. Expects a string that is a valid CSS font-family value.
+font:                "'Lato', 'Sans-serif'"
 
+# The string encoding what fonts to fetch from Google Fonts.
+# See: https://qwtel.com/hydejack/docs/configuration/
+google_fonts:        Lato
 
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+# If you do not use a Google Fonts, uncomment the line below
+# no_google_fonts:     true
 
+# Set your Google Analytics id to receive `pageview` events.
+# To remove Google Anaylics from your page, remove the line below.
+google_analytics:    UA-92346434-1
 
+# Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
+disqus_shortname:    isme2n
 
+# This text will appear in the footer of every page. Markdown enabled.
+copyright:           '&copy; 2017. by isme2n'
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-highlighter: rouge
-# ------ revised ------ 200417
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-# ------ revised ------ 200417
+# Format of the permalinks
+permalink:           pretty
+
+# Pagination configuration (used by the `blog` layout)
+paginate:            8
+paginate_path:       '/page-:num/'
+
+# If you are upgrading form a v5 verison of Hydejack, uncomment the two lines below,
+# so that the location of the feed XML stays the same.
+# feed:
+#   path:              atom.xml
+
+# Set to true when building with the `--lsi` option
+# See: https://jekyllrb.com/docs/variables/#site-variables
+# use_lsi:             true
+
+# Set to `true` if you don't want to show an icon after each link that opens to an external site
+# no_mark_external:    true
+
+# Uncomment this line if third party plugins fail to work with dynimically loaded pages
+# disable_push_state:  true
+
+# Uncomment this line if want to disable the touch drawer on mobile
+# disable_drawer: true
+
+# -----------------------------------------------------------------------------
+#  Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  featured_categories:
+    permalink:       /category/:name/
+    output:          true
+  featured_tags:
+    permalink:       /tag/:name/
+    output:          true
+  projects:
+    permalink:       /projects/:path/
+    output:          true
+
+# -----------------------------------------------------------------------------
+#  Advanced configuration
+# -----------------------------------------------------------------------------
+
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine:       mathjax
+  math_engine_opts:
+    preview:         true
+    preview_as_code: true
 
+compress_html:
+  comments:          ["<!-- ", " -->"]
+  clippings:         all
+  endings:           all
+  ignore:
+    envs:            [development]
 
-
-# 코멘트 창 활성화
-disqus_url: https://jinmang2.disqus.com
-disqus_username: jinmang2
-
-# # Gitalk
-# gitalk:
-#   enable: true    #是否开启Gitalk评论
-#   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-#   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-#   repo: qiubaiying.github.io    #仓库名称
-#   owner: qiubaiying    #github用户名
-#   admin: qiubaiying
-#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
-# Analytics settings
-
-
-# Analytics
-# https://devinlife.com/howto%20github%20pages/google-search-console-and-analytics/
-# analytics:
-#   provider               : "google-gtag" # 구글 어날리틱스 등록 false (default), "google", "google-universal", "custom"
-#   google:
-#     tracking_id          : "UA-163863775-1"
-#     anonymize_ip         : # true, false (default)
-
-# Google Analytics
-ga_track_id: 'UA-163863775-1'            # Format: UA-xxxxxx-xx
-ga_domain: jinmang2.top
-
-
-
-
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+sass:
+  style:             compressed
