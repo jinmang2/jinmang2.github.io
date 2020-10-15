@@ -1,6 +1,6 @@
 ---
 layout: list
-title: ArtificialIntelligence
+title: Artificial-Intelligence
 slug: ai
 menu: true
 submenu: true
