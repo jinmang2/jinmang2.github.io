@@ -1,6 +1,7 @@
 {% if include.text %}
   {% capture desc %}
-{{ include.text | strip_newlines }}
+<!-- {{ include.text | strip_newlines }} -->
+{{ include.text }}
 <!-- {:.message} -->
   {% endcapture %}
   <!-- {{ desc | markdownify }} -->
