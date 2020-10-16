@@ -4,8 +4,8 @@
 <!-- {:.message} -->
   <!-- {% endcapture %} -->
   <!-- {{ desc | markdownify }} -->
-  <!-- {{ desc}} -->
-  {{ include.text }}
+  <!-- {{ desc }} -->
+  {{ include.text | strip_newlines}}
 {% else %}
   <div class="hr" style="padding-bottom:0"></div>
 {% endif %}

@@ -6,5 +6,5 @@ menu: true
 submenu: true
 order: 1
 description:
-  인공지능에 대해 포스팅합니다.
+  <b>인공지능에 대해 포스팅합니다.</b>
 ---
