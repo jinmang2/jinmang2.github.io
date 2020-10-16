@@ -5,7 +5,8 @@
   <!-- {% endcapture %} -->
   <!-- {{ desc | markdownify }} -->
   <!-- {{ desc }} -->
-  {{ include.text | strip_newlines}}
+  {{ include.text }}
 {% else %}
-  <div class="hr" style="padding-bottom:0"></div>
+  <!-- <div class="hr" style="padding-bottom:0"></div> -->
+  <div class="hr"></div>
 {% endif %}
