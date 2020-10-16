@@ -1,11 +1,11 @@
 {% if include.text %}
-  {% capture desc %}
+  <!-- {% capture desc %} -->
 <!-- {{ include.text | strip_newlines }} -->
-{{ include.text }}
 <!-- {:.message} -->
-  {% endcapture %}
+  <!-- {% endcapture %} -->
   <!-- {{ desc | markdownify }} -->
-  {{ desc}}
+  <!-- {{ desc}} -->
+  {{ include.text }}
 {% else %}
   <div class="hr" style="padding-bottom:0"></div>
 {% endif %}
