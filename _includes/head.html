@@ -9,6 +9,11 @@
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:type" content="article">
 
+<!-- mathjax 추가 - 20.10.16 -->
+{% if page.use_math %}
+  {% include mathjax_support.html %}
+{% endif %}
+
 
 {% for tag_slug in page.tags %}
   {% unless tag.header-img %}
@@ -146,10 +151,5 @@
   {% capture icons_url %}{% link assets/icomoon/style.css %}{% endcapture %}
   <link rel="stylesheet" href="{{ icons_url | absolute_url }}">
 </noscript>
-
-<!-- mathjax 추가 - 20.10.16 -->
-{% if page.use_math %}
-  {% include mathjax_support.html %}
-{% endif %}
 
 <!--<![endif]-->
