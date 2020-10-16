@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Reinforcement-Learning
-slug: reinforcement learning
+title: Reinforcement Learning
+slug: rl
 category: ai
 menu: false
 order: 11
