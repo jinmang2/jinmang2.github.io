@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: NLP
-slug: nlp
-category: ai
+title: PyTorch
+slug: pytorch
+category: dev
 menu: false
 order: 11
 ---
