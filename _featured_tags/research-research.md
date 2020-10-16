@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Schmidhuber
-slug: schmidhuber
+title: research
+slug: research
 category: research
 menu: false
 order: 11

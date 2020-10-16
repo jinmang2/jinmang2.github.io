@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Blog
-slug: blog
-category: essay
+title: Hard-ML
+slug: hard-ml
+category: study
 menu: false
 order: 11
 ---

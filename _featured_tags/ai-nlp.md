@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-tit/le: Natural-Language-Processing
+title: Natural-Language-Processing
 slug: nlp
 category: ai
 menu: false
